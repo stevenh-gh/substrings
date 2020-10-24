@@ -20,8 +20,7 @@ end
 
 def substrings(string, _dict)
   substring_hash = Hash.new(0)
-  words = string.split(' ')
-  words.each do |word|
+  string.split(' ').each do |word|
     word_array = substring_single_word(word)
     substring_hash = compare_arrays(word_array, _dict, substring_hash)
   end
